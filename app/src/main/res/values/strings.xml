@@ -11,4 +11,5 @@
   <string name="content_desc_image_view_hours">image view hours</string>
   <string name="content_desc_image_view_phone">image view phone</string>
   <string name="text_toast_app_not_found">the Google Maps app is not installed</string>
+  <string name="text_position">position</string>
 </resources>

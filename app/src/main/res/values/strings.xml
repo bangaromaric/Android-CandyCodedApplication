@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">Candy Coded</string>
     <string name="products_title">Products</string>
+  <string name="content_desc_candy_store">candy store image view</string>
+  <string name="text_geolocation">618 E South St Orlando, FL</string>
+  <string name="text_phone_number">(012)345–6789</string>
+  <string name="text_hours">Everyday 10am-10pm</string>
+  <string name="text_value_geo">geo:0,0?q=618 E South St Orlando, FL 32801</string>
+  <string name="value_uri_image">android.resource://com.codeschool.candycoded/</string>
+  <string name="content_desc_image_view_map">image view map</string>
+  <string name="content_desc_image_view_hours">image view hours</string>
+  <string name="content_desc_image_view_phone">image view phone</string>
 </resources>

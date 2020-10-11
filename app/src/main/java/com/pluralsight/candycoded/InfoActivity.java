@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 
+import android.widget.Toast;
 import com.squareup.picasso.Picasso;
 import java.net.URI;
 
@@ -46,6 +47,8 @@ public class InfoActivity extends AppCompatActivity {
             // Attempt to start an activity that can handle the Intent
             startActivity(mapIntent);
         }
+        else
+            Toast.makeText(this, R.string.text_toast_app_not_found,Toast.LENGTH_LONG);
     }
 
     /**

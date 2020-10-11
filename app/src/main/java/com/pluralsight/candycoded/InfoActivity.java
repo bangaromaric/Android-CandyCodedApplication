@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.squareup.picasso.Picasso;
+import java.net.URI;
 
 public class InfoActivity extends AppCompatActivity {
 
@@ -26,10 +27,11 @@ public class InfoActivity extends AppCompatActivity {
     }
 
     /**
-     * to create and lanch map
-     * @param view android.view.View
+     * to create intent and lanch map
+     * @param view android.view.View, to attach to the Click Listener on the TextView
      */
     public void createMapIntent(View view){
+
         // Create a Uri from the address and passing in the String with the geo location of our store.
         Uri mapUri = Uri.parse("geo:0,0?q=618 E South St Orlando, FL 32801");
 
@@ -39,16 +41,32 @@ public class InfoActivity extends AppCompatActivity {
         // Make the Intent explicit by setting the Google Maps package
         mapIntent.setPackage("com.google.android.apps.maps");
 
-        //check that the result is not equal to null
+        // Check that the result is not equal to null
         if(mapIntent.resolveActivity(getPackageManager()) != null){
             // Attempt to start an activity that can handle the Intent
             startActivity(mapIntent);
         }
     }
 
+    /**
+     * to create intent and lanch phone
+     * @param view android.view.View to attach, to the Click Listener on the TextView
+     */
+    public void createPhoneIntent(View view){
 
-    // ***
-    // TODO - Task 3 - Launch the Phone Activity
-    // ***
+        // Create an Intent with action Intent.ACTION_DIAL
+        Intent phoneIntent = new Intent(Intent.ACTION_DIAL);
+
+        // Create a URI with the Uri.parse() method and pass the telephone number "tel:0123456789".
+        Uri phoneUri = Uri.parse("tel:0123456789");
+
+        // Use the Intent setData() method and pass the Uri we just created.
+        phoneIntent.setData(phoneUri);
+
+        // Start the Activity with the Intent.
+        startActivity(phoneIntent);
+
+
+    }
 
 }
